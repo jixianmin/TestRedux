@@ -1,3 +1,5 @@
+redux 공식 사이트 https://ko.redux.js.org/introduction/getting-started/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
