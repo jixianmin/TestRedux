@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import store from './redux/store';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import store from "./redux/store";
+import ReduxContext from "./contexts/ReduxContext";
 //import { addTodo, completeTodo, showComplete } from "./redux/actions";
 
 // const subscribe = store.subscribe(() => {
@@ -13,10 +14,13 @@ import store from './redux/store';
 // store.dispatch(completeTodo(0));
 // store.dispatch(showComplete());
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App store={store} />
+    <ReduxContext.Provider value={store}>
+      <App />
+    </ReduxContext.Provider>
+    {/* <App store={store} /> */}
   </React.StrictMode>
 );
 
