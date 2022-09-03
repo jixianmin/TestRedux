@@ -1,13 +1,11 @@
-import { ADD_TODO, COMPLETE_TODO } from "./actions";
-// state
-// ['코딩','점심 먹기'];
+import { ADD_TODO, COMPLETE_TODO } from "../actions";
+
 const initialState = [];
 
-export function todoApp(previousState = initialState, action) {
+export default function todos(previousState = initialState, action) {
   //   if (previousState === undefined) {
   //     return [];
   //   }
-
   if (action.type === ADD_TODO) {
     return [...previousState, { text: action.text, done: false }];
   }
